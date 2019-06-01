@@ -1,7 +1,15 @@
 package boilerplate2
 
 // equals, hashcode, toString, copy
-data class Person(val firstName: String, var lastName: String, var age: Int)
+data class Person(val firstName: String, var lastName: String, var age: Int) {
+    var age1: Int = 0
+    get() {
+        return field
+    }
+    set(value) {
+        field = value
+    }
+}
 
 fun main() {
     println(Person("Christian", "Wörz", 24))
